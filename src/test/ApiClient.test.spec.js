@@ -12,7 +12,7 @@ describe('Api client', function () {
 			assert.equal(result.data.rows, 8);
 			assert.equal(result.data.gameFinished, false);
 			assert.equal(result.data.win, false);
-			assert.equal(result.data.cellsOpened, []);
+			assert.equal(result.data.cellsOpened.length, 0);
 		});
 	});
 	it('create a new game custom game', function () {
@@ -23,7 +23,7 @@ describe('Api client', function () {
 			assert.equal(result.data.rows, 20);
 			assert.equal(result.data.gameFinished, false);
 			assert.equal(result.data.win, false);
-			assert.equal(result.data.cellsOpened, []);
+			assert.equal(result.data.cellsOpened.length, 0);
 		});
 	});
 	it('create a new game custom game error', function () {
