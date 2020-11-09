@@ -44,14 +44,14 @@ describe('Api client', function () {
 			assert.equal(res.data.win, false);
 			assert.equal(res.data.cellsOpened.length > 0, true);
 		}
-	}).timeout(10000);
+	}).timeout(50000);
 	it('Flag cells', async function () {
 		let client = new ApiClient.ApiClient();
 		let result = await client.createNewGame(Level.Level.BEGINNER);
 		let gameId = result.data.gameId;
 		let res = await client.rightClick(gameId, 0, 0)
 		assert.equal(res.status, 200);
-	}).timeout(10000);
+	}).timeout(50000);
 
 	it('resume game', async function () {
 		let client = new ApiClient.ApiClient();
@@ -65,6 +65,6 @@ describe('Api client', function () {
 		assert.equal(res.data.win, result.data.win);
 		assert.equal(res.data.cellsOpened.length, result.data.cellsOpened.length);
 
-	}).timeout(10000);
+	}).timeout(50000);
 
 });
