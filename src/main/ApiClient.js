@@ -25,12 +25,7 @@ class ApiClient {
 	}
 
 	async resumeGame(id) {
-		let result = await axios.get(this.baseUrl + this.uriApi + `minesweeper/${id}`).then(response => {
-			console.log(response);
-		}).catch(err => {
-			console.error(err);
-		})
-		return result;
+		return await axios.get(this.baseUrl + this.uriApi + `minesweeper/${id}`)
 	}
 
 	async leftClick(id, col, row) {
